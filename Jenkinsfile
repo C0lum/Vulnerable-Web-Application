@@ -12,7 +12,7 @@ pipeline {
             steps {
                 script {
                     def scannerHome = tool 'SonarQube Scanner';
-                    withSonarQubeEnv('SonarQube') {
+                    withSonarQubeEnv('SonarQube Scanner') {
                         sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=OWASP -Dsonar.sources=."
                     }
                 }
